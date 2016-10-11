@@ -7,6 +7,7 @@
 #include <netinet/in.h>
 #include <net/if_arp.h>
 #include <string.h>
+//
 
 void attacker_network_info(char *dev, struct in_addr *attacker_ip, struct ether_addr *attacker_mac, struct in_addr *gateway_ip){
 	char cmd[200], ip_imm[50], mac_imm[50], gateway_ip_imm[50];
